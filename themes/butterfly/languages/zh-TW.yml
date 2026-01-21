@@ -35,7 +35,7 @@ post:
   back_to_home: 返回首頁
 
 search:
-  title: 搜尋
+  title: Search
   load_data: 資料載入中
   input_placeholder: 搜尋文章
   algolia_search:
