@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【C++】競程筆記（背包問題）</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="【C-】競程筆記（背包問題）"><a href="#【C-】競程筆記（背包問題）" class="headerlink" title="【C++】競程筆記（背包問題）"></a>【C++】競程筆記（背包問題）</h1><p>題目範例參考：NTUCPC Guide，此筆記僅為個人學習用途。</p>
+<p>最後更新時間：</p>
+<h2 id="什麼是背包問題"><a href="#什麼是背包問題" class="headerlink" title="什麼是背包問題"></a>什麼是背包問題</h2><p>背包問題（Knapsack Problem）是一種組合最佳化的 NP-Complete 問題，擁有多種變形，其中最基礎的是「0&#x2F;1 背包問題」。</p>
+<p>在 DP 裡面，背包問題是最經典且常見的題型之一。</p>
+<h3 id="01-背包問題"><a href="#01-背包問題" class="headerlink" title="01 背包問題"></a>01 背包問題</h3><p>Problem Source：<a href="https://oj.ntucpc.org/problems/801">https://oj.ntucpc.org/problems/801</a></p>
+<p>所謂 0 1 就是物品可拿或不拿。</p>
+<p>題目描述：</p>
+<p>有 $N$ 個物品編號 $1 \sim N$ ，第 $i$ 個物品的重量和價值分別是 $w_i$ 和 $v_i$。學姊打算從 $N$ 個物品選其中一些帶走，但她只有大小為 $W$ 的背包，也就是說她選擇的物品總重不能超過 $W$。請問背包能容納的物品的總價值最大是多少？</p>
+<hr>
+<p>如果直接定義 $dp[i]$ 是前 $i$ 個物品的最大總價值，是不實際的，因為需要考慮到 $W$ 重量的因素。</p>
+<p>因此用到二維 DP 概念，$dp[i][j]$ 為前 $i$ 個物品且背包當前容重量限制為 $j$ 時，能獲得的最大價值。</p>
+<p>對於第 $i$ 個物品（重量 $w[i]$，價值 $v[i]$），當考慮是否要放入背包（當前容量 $j$）時，只有兩種選擇：</p>
+<ol>
+<li><p>不拿第 $i$ 個物品，最大價值 &#x3D; 前 $i-1$ 個物品且容量為 $j$ 的最大總價值。<br>$$dp[i][j] &#x3D; dp[i-1][j]$$</p>
+</li>
+<li><p>拿第 $i$ 個物品，前提是背包要夠裝（$j \geq w[i]$），如果拿了，會得到 $v[i]$ 的價值，但背包容量會減少 $w[i]$。剩下的容量 $j - w[i]$ 就要去查詢「前 $i-1$ 個物品」能湊出的最大價值。<br>$$dp[i][j] &#x3D; dp[i-1][j-w[i]] + v[i]$$</p>
+</li>
+</ol>
+<p>由於要求最大價值，因此<br>$$dp[i][j] &#x3D; max(dp[i-1][j], \quad dp[i-1][j-w[i]] + v[i])$$</p>
+<p>最後在 base case 定義上，設定為全部都是 0。</p>
+<p>範例程式碼：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">105</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXW = <span class="number">100005</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> INF = <span class="number">-1e9</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> dp[MAXN][MAXW];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[MAXN], v[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">    <span class="type">int</span> n, wmax;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; wmax;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) cin &gt;&gt; w[i] &gt;&gt; v[i];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= wmax; ++j)&#123;</span><br><span class="line">            <span class="keyword">if</span> (j &lt; w[i])&#123;</span><br><span class="line">                dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                dp[i][j] = <span class="built_in">max</span>(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[n][wmax] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="0-1-背包問題變形：鐵棒問題"><a href="#0-1-背包問題變形：鐵棒問題" class="headerlink" title="0&#x2F;1 背包問題變形：鐵棒問題"></a>0&#x2F;1 背包問題變形：鐵棒問題</h3><p>此為經典的子集和加總問題（Subset Sum Problem），屬於 0&#x2F;1 背包問題的變形。</p>
+<p>Problem Source：<a href="https://oj.ntucpc.org/problems/802">https://oj.ntucpc.org/problems/802</a></p>
+<ol>
+<li>定義狀態： $dp[i][j]$ 是一個布林值，其意義為從前 $i$ 條鐵棒中選出若干條，使其長度總和恰好為 $j$，則為 true，否則為 false。</li>
+<li>定義轉移式：</li>
+</ol>
+<p>對於第 $i$ 條鐵棒（其長度為 $l_i$），有兩種選擇：</p>
+<ul>
+<li><p>不選這條鐵棒：如果前 $i-1$ 條鐵棒能湊出長度 $j$，那前 $i$ 條當然也能。<br>$$dp[i-1][j]$$</p>
+</li>
+<li><p>選這條鐵棒：前提是目標長度 $j$ 必須大於等於鐵棒長度 $l_i$，如果選了，問題就變成「前 $i-1$ 條鐵棒能否湊出長度 $j - l_i$」。<br>$$dp[i-1][j-l_i] \text{ }, (j \geq l_i)$$</p>
+</li>
+</ul>
+<p>完整轉移式：<br>$$dp[i][j] &#x3D; dp[i-1][j] \lor dp[i-1][j-l_i]$$</p>
+<p>其中 $\lor$ 表示 OR，其中一個可以湊出長度 $j$ 就行。</p>
+<ol start="3">
+<li>定義初始狀態：沒鐵棒時（$i &#x3D; 0$），<ul>
+<li>湊出長度為 0 是可能的（一條都不選）：$dp[0][0] &#x3D; true$</li>
+<li>湊出任何大於 0 的長度是不可能的：$dp[0][j] &#x3D; false$ （for $j &gt; 0$）</li>
+</ul>
+</li>
+</ol>
+<p>範例程式碼：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">35</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXL = <span class="number">1005</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> dp[MAXN][MAXL];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> l[MAXL];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="type">int</span> L, N;</span><br><span class="line">        cin &gt;&gt; L &gt;&gt; N;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) cin &gt;&gt; l[i];</span><br><span class="line"></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= L; ++j)&#123;</span><br><span class="line">                <span class="type">bool</span> not_pick = dp[i - <span class="number">1</span>][j];</span><br><span class="line"></span><br><span class="line">                <span class="type">bool</span> pick = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">if</span> (j &gt;= l[i]) pick = dp[i - <span class="number">1</span>][j - l[i]];</span><br><span class="line"></span><br><span class="line">                dp[i][j] = not_pick || pick;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cout &lt;&lt; (dp[N][L] ? <span class="string">&quot;TAK\n&quot;</span> : <span class="string">&quot;NO\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="0-1-背包問題變形：高棕櫚農場"><a href="#0-1-背包問題變形：高棕櫚農場" class="headerlink" title="0&#x2F;1 背包問題變形：高棕櫚農場"></a>0&#x2F;1 背包問題變形：高棕櫚農場</h3><p>Problem Source：<a href="https://tioj.sprout.tw/problems/143">https://tioj.sprout.tw/problems/143</a></p>
+<p>為什麼是背包問題？</p>
+<p>在時間的飽足感當容量（ $M$ ）限制下，選擇若干個高棕櫚（物品），使得總滿足感（價值）最大化。</p>
+<ol>
+<li>定義狀態：令 $dp[j]$ 表示當飽足感上限為 $j$ 時，能夠獲得的最大滿足感。（本問題可用二維 dp 做，但會超時，因此在這裡對狀態壓縮成一維）</li>
+<li>定義轉移式：</li>
+</ol>
+<p>對於每個高棕櫚 $i$（其飽足感為 $A_i$，滿足感為 $B_i$），有兩種選擇：</p>
+<ul>
+<li>不吃：最大滿足感保持不變，即 $dp[j]$。</li>
+<li>吃：選後背包剩餘可裝重量為 $j - A_i$。此時的價值就是「容量為 $j - A_i$ 時的最大價值」加上「當前高棕櫚的滿足感 $B_i$」，即 $dp[j - A_i] + B_i$。</li>
+</ul>
+<p>取兩種選擇的最大值即為轉移式：<br>$$dp[j] &#x3D; max(dp[j], \quad dp[j - A_i] + B_i)$$</p>
+<ol start="3">
+<li>定義初始狀態：滿足感全 0（$dp[0 \cdots M] &#x3D; 0$）。</li>
+</ol>
+<p>範例程式碼：</p>
+<p>由於每個物品只能選一次，在用一維 dp 計算時，內層迴圈順序由大到小（從 $M$ 遞減到 $A_i$）遍歷，這樣可確保計算 $dp[j]$ 時所參考的 $dp[j - A_i]$ 是來自「上一個物品」的狀態，而不是「當前物品」已經被選過之後的狀態。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">        <span class="type">int</span> N, M;</span><br><span class="line"></span><br><span class="line">        cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">A</span><span class="params">(N)</span>, <span class="title">B</span><span class="params">(N)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; A[i] &gt;&gt; B[i];</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dp</span><span class="params">(M + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</span><br><span class="line">            <span class="type">int</span> w = A[i];</span><br><span class="line">            <span class="type">int</span> v = B[i];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = M; j &gt;= w; --j)</span><br><span class="line">                dp[j] = <span class="built_in">max</span>(dp[j], dp[j - w] + v);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cout &lt;&lt; dp[M] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="0-1-背包問題變形：高棕櫚農場2"><a href="#0-1-背包問題變形：高棕櫚農場2" class="headerlink" title="0&#x2F;1 背包問題變形：高棕櫚農場2"></a>0&#x2F;1 背包問題變形：高棕櫚農場2</h3><p>Problem Source：<a href="https://tioj.sprout.tw/problems/144">https://tioj.sprout.tw/problems/144</a></p>
+<p>在原本的條件上，這題還給你加一個限制： $K$ （取幾高棕櫚的上限）。</p>
+<p>解題邏輯跟上題差不多，不管物品 $i$ 的維度，只需忙 $M, K$ 的維度即可，此為滾動 DP 優化空間的做法。</p>
+<ol>
+<li>定義狀態：令 $dp[j][k]$ 為當前飽足感為 $j$，且吃了 $k$ 個高棕櫚時，所能獲得的最大滿足感。</li>
+<li>定義轉移式：</li>
+</ol>
+<p>對於每個高棕櫚 $i$（其飽足感為 $A_i$，滿足感為 $B_i$），有兩種選擇：</p>
+<ul>
+<li><p>不吃：狀態維持不變，即<br>$$dp[j][k]$$</p>
+</li>
+<li><p>吃：前提是當前飽足感 $j \geq A_i$ 且數量 $k \geq 1$。此時滿足感為由「飽足感 $j - A_i$ 且數量 $k - 1$」的狀態加上當前的滿足感 $B_i$，即<br>$$dp[j - A_i][k - 1] + B_i$$</p>
+</li>
+</ul>
+<p>完整轉移式：<br>$$dp[j][k] &#x3D; max(dp[j][k], \quad dp[j-w][k-1] + v)$$</p>
+<ol start="3">
+<li>定義初始狀態：跟上題一樣，dp 全 0。</li>
+</ol>
+<p>範例程式碼：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span> (T--)&#123;</span><br><span class="line">        <span class="type">int</span> N, M, K;</span><br><span class="line">        cin &gt;&gt; N &gt;&gt; M &gt;&gt; K;</span><br><span class="line"></span><br><span class="line">        vector &lt;vector &lt;<span class="type">int</span>&gt;&gt; <span class="built_in">dp</span>(M + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(K + <span class="number">1</span>, <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">A</span><span class="params">(N)</span>, <span class="title">B</span><span class="params">(N)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; A[i] &gt;&gt; B[i];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i)&#123;</span><br><span class="line">            <span class="type">int</span> w = A[i];</span><br><span class="line">            <span class="type">int</span> v = B[i];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = M; j &gt;= w; --j)&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> k = K; k &gt;= <span class="number">1</span>; --k)&#123;</span><br><span class="line">                    dp[j][k] = <span class="built_in">max</span>(dp[j][k], dp[j - w][k - <span class="number">1</span>] + v);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        cout &lt;&lt; dp[M][K] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="背包問題的另種形式：無限背包問題（Unbounded-Knapsack-Problem）"><a href="#背包問題的另種形式：無限背包問題（Unbounded-Knapsack-Problem）" class="headerlink" title="背包問題的另種形式：無限背包問題（Unbounded Knapsack Problem）"></a>背包問題的另種形式：無限背包問題（Unbounded Knapsack Problem）</h3><p>無限背包問題又稱為完全背包問題，與 0&#x2F;1 背包問題不同的是，完全背包問題的每種物品的數量是無限的，只要背包裝得下，同一種物品可選 1 個、2 個，甚至無限個。</p>
+<p>接下來講個問題。</p>
+<p>Problem Source：<a href="https://oj.ntucpc.org/problems/825">https://oj.ntucpc.org/problems/825</a></p>
+<p><strong>Description</strong></p>
+<p>現在有 $N$ 個物品，第 $i$ 個物品的重量為 $w_i$ ，價值為 $v_i$ 。每個物品都有無限多個。你有一個重量限制為 $W$ 的背包，你希望可以在不超過這個背包重量限制的前提下，盡可能塞入價值總和最高的物品。請問你可以塞入最高的物品總價值是多少？</p>
+<ol>
+<li>定義狀態： $dp[j]$ 為當背包重量總和為 j 時所能裝入物品的最大價值總和。所求解為 $dp[W]$ （背包最大重量限制）。</li>
+<li>定義轉移式：<ul>
+<li>不選：價值不變，仍為 $dp[j]$。</li>
+<li>選：選後背包剩餘可裝重量為 $j - w_i$。此時的價值就是「容量為 $j - w_i$ 時的最大價值」加上「當前物品的價值 $v_i$」。</li>
+</ul>
+</li>
+</ol>
+<p>最終得到完整轉移式：<br>$$dp[j] &#x3D; max(dp[j], \quad dp[j-w_i] + v_i)$$</p>
+<ol start="3">
+<li>定義初始狀態：全都是 0。</li>
+</ol>
+<p>範例程式碼：</p>
+<p>可發現在 0&#x2F;1 背包問題中，內層迴圈往往是以「逆序」遍歷，也就是 $W \to w_i$ 的走訪。</p>
+<p>但到了無限背包問題，就會相反過來變成「正序」遍歷（ $w_i \to W$ ）</p>
+<p>差別在於 0&#x2F;1 背包問題每個物品都只能取一次，而無限背包可以無限取，也就是每件物品可以重複取的情況，因而需要對無限背包改成正序遍歷。</p>
+<ul>
+<li>正序（無限背包）：計算 $dp[j]$ 時， $dp[j - w_i]$ 是新的狀態，可能已包含當前物品。</li>
+<li>逆序（0&#x2F;1 背包）：計算 $dp[j]$ 時， $dp[j - w_i]$ 是舊的狀態，不包含當前物品。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, W;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; W;</span><br><span class="line"></span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; <span class="built_in">w</span>(N), <span class="built_in">v</span>(N);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; w[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; v[i];</span><br><span class="line"></span><br><span class="line">    vector &lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="built_in">dp</span>(W + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = w[i]; j &lt;= W; ++j)</span><br><span class="line">            dp[j] = <span class="built_in">max</span>(dp[j], dp[j - w[i]] + v[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; dp[W] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>競程</category>
+        <category>競程筆記</category>
+      </categories>
+      <tags>
+        <tag>pitch</tag>
+        <tag>scales</tag>
+        <tag>keys</tag>
+        <tag>interval</tag>
+        <tag>triads</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
