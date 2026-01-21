@@ -11,18 +11,18 @@
 
 nav:
   # Navigation bar logo image
-  logo:
+  logo: /img/avatar.jpg
   display_title: true
   display_post_title: true
   # Whether to fix navigation bar
   fixed: false
 
 menu:
-  首頁: / || fas fa-home
-  文章: /archives/ || fas fa-archive
-  分類: /categories/ || fas fa-folder-open
-  標籤: /tags/ || fas fa-tags
-  關於: /about/ || fas fa-heart
+  Home: / || fas fa-home
+  About: /about/ || fas fa-heart
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
 
 # --------------------------------------
 # Code Blocks Settings
@@ -58,7 +58,7 @@ favicon: /img/favicon.ico
 
 avatar:
   img: /img/avatar.jpg
-  effect: true
+  effect: false
 
 # Disable all banner images
 disable_top_img: false
@@ -474,8 +474,8 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  use: local_search
+  placeholder: Search
 
   # Algolia Search
   algolia_search:

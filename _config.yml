@@ -104,3 +104,10 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Local Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
