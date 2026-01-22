@@ -1,16 +1,14 @@
 ---
-title: 【C++】競程筆記（背包問題）
-date: 2026-01-21 12:00:00
+title: 音階
+date: 2026-01-22 12:00:00
 updated: 2026-01-21 12:00:00
 tags:
-  - pitch
-  - scales
-  - keys
-  - interval
-  - triads
+  - 音階 Scales
+  - 調 Keys
+  - 音程 Interval
+  - 三和弦 Triads
 categories:
-  - 競程
-  - 競程筆記
+  - [音高 Pitch, 音階 Scales]
 cover: /img/cpp_cover.png
 mathjax: true
 ---
