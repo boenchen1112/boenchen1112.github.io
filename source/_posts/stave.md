@@ -1,5 +1,6 @@
 ---
-title: 五線譜
+title: stave
+abbrlink: staff-notation
 date: 2026-01-22 12:00:00
 updated: 2026-01-22 12:00:00
 tags:
