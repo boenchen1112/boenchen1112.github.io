@@ -1,58 +1,80 @@
 ---
-title: 關於我與這個網站
-date: 2024-01-01 00:00:00
+title: 前奏
+date: 2026-01-22 00:00:00
 type: "about"
 ---
 
-## Introduction
+## 前奏
 
-我是 LukeTseng，一個即將就讀於某國立大學資訊相關科系的高中生。
+各位讀者平安: 
 
-2024/02/23 開始，為了複學跟精進自身的程式設計能力，我開始學著別人自己寫文章、做筆記並放到網路上。
+筆者目前是一名高中生，未來計畫赴海外就讀科技領域。
 
-當我從前只是寫程式、電視呆瓜（雖然現在也是XD），但我仍努力改變現狀，希望能成就更好的自己。
+這個網站，是我在科技與音樂之間的故事。
 
-在 2024 年在 HackMD 上做筆記，並在 wordpress 上架站，後來覺得 wordpress 實在限制太多了，剛好偶然認識到了 github page，剛好利用 Hexo 架站。
+我對科技的興趣，其實不只來自課堂。曾經在新竹清華大學參加由 Lam Research 舉辦的暑期營隊，讓我第一次近距離接觸到一群對技術充滿熱情、也願意投入大量時間自我學習的人。其中有一位學長對我影響特別深。他一邊準備全國性競賽，一邊自學各種進階程式設計內容，卻仍願意把所學整理成文章與專案，分享在自己的部落格與 GitHub 上。
 
-所以也就有了現在這個網站。
+雖然後來我們失去了聯繫，但他的網站一直靜靜地躺在我的書籤裡，很多年沒有刪除。對我而言，那不只是一個網址，而是一種提醒: 提醒我，學會之後，還可以選擇分享。
 
-網站持續建置中…持續努力跟學習程式設計、資訊工程的相關課程；
+從小，我與音樂的關係算是順利的。這是一份從神而來的恩賜，我心存感激，但它同時也讓我與身邊的人產生了一些距離。我慢慢意識到，能力本身有時會帶來壓力，不只是對自己，也對他人。也正因如此，我開始思考：是否有一種方式，能讓我所擁有的，成為支持別人的力量？這個問題，在屬的真耶穌教會中，變得特別重要: 如何盡我所能報答主恩
+
+進入高中後，我逐漸確定自己會走向資訊科技相關的道路。面對美國高度競爭的環境，我選修了 APCS，也接觸了人生第一個程式語言——Java。它或許不是最流行的語言，但清楚而嚴謹的結構，讓我能夠理解系統背後的邏輯，而不只是寫出能執行的程式。對我來說，這樣的學習方式很踏實。
+
+到了 2024 年，我決定重新打穩自己的技術基礎，並真正建立一個屬於自己的網站。過程中，我再次點開了那個多年未動的書籤。網站從 Hexo 開始建構，也在 Claude Code 的協助下，讓我的學習效率與嘗試空間都大幅提升。
+
+至於網站的主題，我想了很久，最後還是回到了音樂。但這一次，不是站在舞台中央，而是站在一旁陪伴。這個平台主要分享中高階的音樂概念，特別是和聲與即興相關內容。基礎會簡要帶過，重點放在如何「聽得更深、想得更遠」。如果過程中有不清楚的地方，也很歡迎搭配其他資源，或與我交流。
+
+學習，本來就不該是一條獨自前行的路。
+
+對我而言，這個網站是一種感恩。我相信，每一份被給予的能力，都有超越自我的意義。若這裡的內容，能在某個時刻成為你的陪伴、幫助或提醒，那麼它就已經完成了它存在的價值。
+
+這個網站會持續更新 (未來或許也會逐步加入科技相關的內容)。
+
+謝謝您的支持。
+
+<!-->
+Hi, I’m Boen Chen, a high school senior preparing to study abroad in computer science or a related technology field. This website is a place where I document my journey—through technology, music, and learning how to transform personal ability into something that can genuinely serve others.
+
+My curiosity about technology expanded beyond school during a summer camp hosted by Lam Research at National Tsing Hua University in Hsinchu. There, I met students whose passion and dedication deeply inspired me. One senior, in particular, left a lasting impression. While preparing for national competitions, he taught himself advanced programming topics and generously shared everything he learned through his personal blog and GitHub. His projects weren’t just impressive—they were thoughtful, playful, and open to the world.
+
+Although we eventually lost contact, his website remained bookmarked in my browser for years, quietly reminding me of the kind of contributor I wanted to become.
+
+Growing up, music came easily to me. While I’m grateful for that gift, it also created distance. I often sensed an unspoken gap between myself and my peers—between what I could do and what others hoped to achieve. Over time, I began to understand the pressure that talent can place not only on oneself, but on those around you. This led me to search for a better way to share what I had been given, especially within my church community at True Jesus Church—not to stand out, but to support.
+
+In high school, I became confident that my future would lie in information technology. Aware of how competitive computer science can be in the U.S., I enrolled in AP Computer Science and encountered my first programming language: Java. It wasn’t Python or C, but Java quickly became meaningful to me. Its clear structure helped me understand how systems are built, not just how to make them work. It taught me to value fundamentals without losing sight of expression.
+
+In 2024, I decided to strengthen my technical foundation and finally build a personal website—rediscovering that long-saved bookmark along the way. I started with Hexo, a static site generator, and with the help of Claude Code by Anthropic, my learning process accelerated in ways I hadn’t expected.
+
+Choosing the focus of this website took time. I eventually returned to music—not as performance, but as accompaniment. This platform mainly explores intermediate to advanced musical ideas, especially harmony and improvisation. I briefly touch on fundamentals, but the goal is to encourage deeper listening and musical thinking. If something feels unclear, I warmly encourage you to explore other resources or reach out—learning is never meant to be solitary.
+
+At its core, this website is an expression of gratitude. I believe every gift has a purpose beyond the self. If what I share here can quietly support, guide, or encourage someone else, then it has fulfilled that purpose.
+
+This site will continue to grow over time, with ongoing reflections on music—and, increasingly, on technology as well.
+
+Thank you for being here.
+<-->
 
 ## 個人專長
 
-- Arduino
-- Python
-- C++
-- 軟體開發
+#### 資訊
 
-## 為什麼喜歡程式？
+- Java
+- Python（小型演算法、實驗性專案）
+- 靜態網站架設（Hexo）
 
-我很喜歡玩遊戲，在玩遊戲的過程中我總會突發奇想，我想知道它背後的原理是什麼，也想製作一款屬於自己的遊戲，於是我在國中的時候就看了很多國內外的影片，在講遊戲的原理是什麼。這部分牽涉到程式設計跟電腦科學等諸多部分，而程式設計是製作遊戲的核心基礎，於是我開始上網找了一些資料、影片來看，開始自學程式設計。
+#### 音樂
 
-接觸程式設計後，帶給我的並不是反感、無聊，而是給我帶來新世界的感覺，從此我就愛上了程式。
-
-一開始我接觸到的是 Python，而趣味性跟強大的執行力使然，加上 Python 容易學，我很快就掌握到了要領，很快就進階到了第二支影片遊戲開發的影片。
-
-只不過國中階段我試了好久，很長一段時間，就是做不出一款遊戲，後來我才發現是我一開始想的太難了，不如從起初開始的地方，試著改良影片裡的範例看怎麼樣？
-
-到了高中後，自主學習還有課程帶給我製作遊戲的更多養分，也趁這時在 ewant 自學平台上找到了一個 Python 課程通過認證。不過高中的課業繁重，一開始我的目標以繁星為重，我很努力在 K 書，以致於壓縮了我自學程式設計、製作遊戲的時間，甚至半年都沒有碰過一次程式。
-
-高二上，我再次燃起一行火熱愛跟製作遊戲的專案，並利用平常每天下的一小時創作遊戲，參賽了。暑假時，儘管在限制中想要放棄，但頭都洗下去了，那就把它完成完吧，做不做得到。於是一個學期的時間過去了，加上高一製作的時間，等於是花了將近一年在製作這款遊戲。
-
-之後呢，我對這款遊戲投稿到自主學習年會後，得到佳選，得以在百餘人面前進行發表，這不算什麼，但以我的程度而言，這就已經很棒了。
-
-以上，我可能不會做遊戲了，因為性價報酬的太低，花的時間太多了，做的也沒比人家好，但有一點是貨真價實的，就是真的學到很多東西，也了解到遊戲產業的辛苦。
+- 鋼琴
+- 小提琴
+- 單簧管
+- 二胡
+- DAW 數位音樂工作站（錄音、編曲、製作）
 
 ## 站內資源
 
-(2025/08/06 前) 本站隨機圖 API : https://picsum.photos/1600/900
+主題:
+ Butterfly, github : https://github.com/jerryc127/hexo-theme-butterfly
 
-2025/08/06 前使用主題 shokaX, github : https://github.com/theme-shoka-x/hexo-theme-shokaX/
+## 個人資訊
 
-2025/08/08 現用主題 butterfly, github : https://github.com/jerryc127/hexo-theme-butterfly
-
-## 其他個人資訊
-
-hackmd：https://hackmd.io/@LukeTseng
-
-github：https://github.com/LukeTsengTW
+Github：https://boenchen1112.github
