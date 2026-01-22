@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>五線譜</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h1 id="1-認識五線譜上的音符"><a href="#1-認識五線譜上的音符" class="headerlink" title="1. 認識五線譜上的音符"></a>1. 認識五線譜上的音符</h1><p><em>Treble Clef, Bass Clef, and Basic Note Values</em></p>
+<p>在這一章中，你將學會以下三個重點：</p>
+<ul>
+<li>高音譜號中的音符（Treble Clef）</li>
+<li>低音譜號中的音符（Bass Clef）</li>
+<li>五線譜上的基本音符與符桿方向</li>
+</ul>
+<hr>
+<h2 id="一、五線譜（The-Stave）"><a href="#一、五線譜（The-Stave）" class="headerlink" title="一、五線譜（The Stave）"></a>一、五線譜（The Stave）</h2><p>五線譜由 <strong>五條線與四個空間</strong> 組成。<br><strong>音符的位置越高，音高越高；位置越低，音高越低。</strong></p>
+<p>音符可以放在：</p>
+<ul>
+<li>線上（lines）</li>
+<li>空間中（spaces）</li>
+<li>或加線上（ledger lines）</li>
+</ul>
+<hr>
+<h2 id="二、譜號（Clef）"><a href="#二、譜號（Clef）" class="headerlink" title="二、譜號（Clef）"></a>二、譜號（Clef）</h2><p>在五線譜的最左側，會出現一個符號，稱為 <strong>譜號（clef）</strong>。<br>譜號的功能是：<strong>決定每一條線與空間所代表的音高</strong>。</p>
+<p>常見的譜號有兩種：</p>
+<ul>
+<li>高音譜號（Treble Clef）</li>
+<li>低音譜號（Bass Clef）</li>
+</ul>
+<hr>
+<h2 id="三、高音譜號（Treble-Clef-G-Clef）"><a href="#三、高音譜號（Treble-Clef-G-Clef）" class="headerlink" title="三、高音譜號（Treble Clef &#x2F; G Clef）"></a>三、高音譜號（Treble Clef &#x2F; G Clef）</h2><h3 id="1-什麼是高音譜號？"><a href="#1-什麼是高音譜號？" class="headerlink" title="1. 什麼是高音譜號？"></a>1. 什麼是高音譜號？</h3><ul>
+<li>高音譜號主要用來表示 <strong>中央 C 以上的音</strong></li>
+<li>又稱為 <strong>G 譜號（G Clef）</strong></li>
+<li>因為它的旋轉部分 <strong>剛好圈住五線譜上的 G 音那一條線</strong></li>
+</ul>
+<p>（看起來也很像一個裝飾得很華麗的字母 G）</p>
+<hr>
+<h3 id="2-高音譜號中的中央-C（Middle-C）"><a href="#2-高音譜號中的中央-C（Middle-C）" class="headerlink" title="2. 高音譜號中的中央 C（Middle C）"></a>2. 高音譜號中的中央 C（Middle C）</h3><ul>
+<li><strong>中央 C 不在五線譜內</strong></li>
+<li>它位於五線譜 <strong>正下方的一條加線上</strong></li>
+<li>這條額外的短線稱為 <strong>加線（ledger line）</strong></li>
+</ul>
+<hr>
+<h2 id="四、低音譜號（Bass-Clef-F-Clef）"><a href="#四、低音譜號（Bass-Clef-F-Clef）" class="headerlink" title="四、低音譜號（Bass Clef &#x2F; F Clef）"></a>四、低音譜號（Bass Clef &#x2F; F Clef）</h2><h3 id="1-什麼是低音譜號？"><a href="#1-什麼是低音譜號？" class="headerlink" title="1. 什麼是低音譜號？"></a>1. 什麼是低音譜號？</h3><ul>
+<li>低音譜號主要用來表示 <strong>中央 C 以下的音</strong></li>
+<li>又稱為 <strong>F 譜號（F Clef）</strong></li>
+<li>譜號的起點落在 <strong>F 音所在的線上</strong></li>
+<li>旁邊的兩個小點，剛好夾住這條 F 音的線</li>
+</ul>
+<hr>
+<h3 id="2-低音譜號中的中央-C"><a href="#2-低音譜號中的中央-C" class="headerlink" title="2. 低音譜號中的中央 C"></a>2. 低音譜號中的中央 C</h3><ul>
+<li>在低音譜號中，<strong>中央 C 位於五線譜上方</strong></li>
+<li>同樣需要使用 <strong>一條加線</strong></li>
+<li>另外，也需要認識：<ul>
+<li><strong>低音譜號中，中央 C 上方的 D 音</strong></li>
+<li>它位於「加線上方的空間」</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="五、兩個譜號一起看（Treble-Bass-Together）"><a href="#五、兩個譜號一起看（Treble-Bass-Together）" class="headerlink" title="五、兩個譜號一起看（Treble &amp; Bass Together）"></a>五、兩個譜號一起看（Treble &amp; Bass Together）</h2><p>當高音譜號與低音譜號同時出現時：</p>
+<ul>
+<li>可以完整表示從 <strong>低音 F 到高音 G</strong> 的音域</li>
+<li><strong>中央 C 剛好位於兩個譜號的正中間</strong></li>
+<li>它是連接高音與低音的「橋樑」</li>
+</ul>
+<blockquote>
+<p>試著觀察：<br>高音譜號往下走、低音譜號往上走，會在中央 C 相遇。</p>
+</blockquote>
+<hr>
+<h2 id="六、符桿與符頭（Stems-Noteheads）"><a href="#六、符桿與符頭（Stems-Noteheads）" class="headerlink" title="六、符桿與符頭（Stems &amp; Noteheads）"></a>六、符桿與符頭（Stems &amp; Noteheads）</h2><h3 id="1-符頭（Notehead）"><a href="#1-符頭（Notehead）" class="headerlink" title="1. 符頭（Notehead）"></a>1. 符頭（Notehead）</h3><ul>
+<li>表示音符的位置</li>
+<li>決定音高</li>
+</ul>
+<h3 id="2-符桿（Stem）"><a href="#2-符桿（Stem）" class="headerlink" title="2. 符桿（Stem）"></a>2. 符桿（Stem）</h3><ul>
+<li>除了全音符（Semibreve）以外，大多數音符都有符桿</li>
+<li><strong>符桿長度固定，約為三個空間高</strong></li>
+<li>符桿的方向取決於音符在五線譜上的位置</li>
+</ul>
+<hr>
+<h3 id="3-符桿方向規則（重要）"><a href="#3-符桿方向規則（重要）" class="headerlink" title="3. 符桿方向規則（重要）"></a>3. 符桿方向規則（重要）</h3><ul>
+<li><p><strong>音符在中線以下</strong><br>→ 符桿 <strong>向上</strong>，從符頭<strong>右側</strong>延伸  </p>
+</li>
+<li><p><strong>音符在中線以上</strong><br>→ 符桿 <strong>向下</strong>，從符頭<strong>左側</strong>延伸  </p>
+</li>
+<li><p><strong>音符在中線上</strong><br>→ 符桿 <strong>可向上或向下</strong>（兩者皆正確）</p>
+</li>
+</ul>
+<hr>
+<h2 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h2><p>在這一章中，你已經學會：</p>
+<ul>
+<li>五線譜的基本結構  </li>
+<li>高音譜號與低音譜號的用途  </li>
+<li>中央 C 在兩個譜號中的位置  </li>
+<li>音符符桿的方向規則</li>
+</ul>
+<p>下一章，我們將介紹 <strong>音符的時值（minims、crotchets、quavers）</strong>，以及它們在音樂中如何被計算與感受。</p>
+]]></content>
+      <categories>
+        <category>音高 Pitch</category>
+        <category>音階 Scales</category>
+      </categories>
+      <tags>
+        <tag>音階 Scales</tag>
+        <tag>調 Keys</tag>
+        <tag>音程 Interval</tag>
+        <tag>三和弦 Triads</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>音階</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="【C-】競程筆記（背包問題）"><a href="#【C-】競程筆記（背包問題）" class="headerlink" title="【C++】競程筆記（背包問題）"></a>【C++】競程筆記（背包問題）</h1><p>題目範例參考：NTUCPC Guide，此筆記僅為個人學習用途。</p>
@@ -129,23 +252,5 @@
         <tag>音程 Interval</tag>
         <tag>三和弦 Triads</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/undefined/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>

@@ -85,6 +85,19 @@ def export_mscz_to_png(input_file, output_folder, musescore_path=None):
     base_name = os.path.splitext(os.path.basename(input_file))[0]
     output_file = os.path.join(output_folder, f"{base_name}.png")
 
+    # Find next available version number (001, 002, 003, etc.)
+    version = 1
+    while True:
+        version_str = f"{version:03d}"
+        output_file = os.path.join(output_folder, f"{version_str}.png")
+        # Also check for multi-page pattern
+        multi_page_pattern = os.path.join(output_folder, f"{version_str}-*.png")
+        if not os.path.exists(output_file) and not glob.glob(multi_page_pattern):
+            break
+        version += 1
+
+    print(f"Using version number: {version_str}")
+
     # Build command
     # MuseScore exports multi-page scores as name-1.png, name-2.png, etc.
     cmd = [
@@ -117,8 +130,8 @@ def export_mscz_to_png(input_file, output_folder, musescore_path=None):
         if os.path.exists(output_file):
             created_files.append(output_file)
 
-        # Check for multi-page output (name-1.png, name-2.png, etc.)
-        pattern = os.path.join(output_folder, f"{base_name}-*.png")
+        # Check for multi-page output (001-1.png, 001-2.png, etc.)
+        pattern = os.path.join(output_folder, f"{version_str}-*.png")
         created_files.extend(glob.glob(pattern))
 
         if created_files:
