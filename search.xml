@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【C++】競程筆記（背包問題）</title>
+    <title>音階</title>
     <url>/posts/undefined/</url>
     <content><![CDATA[<h1 id="【C-】競程筆記（背包問題）"><a href="#【C-】競程筆記（背包問題）" class="headerlink" title="【C++】競程筆記（背包問題）"></a>【C++】競程筆記（背包問題）</h1><p>題目範例參考：NTUCPC Guide，此筆記僅為個人學習用途。</p>
 <p>最後更新時間：</p>
@@ -120,15 +120,14 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>), cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, W;</span><br><span class="line">    cin &gt;&gt; N &gt;&gt; W;</span><br><span class="line"></span><br><span class="line">    vector &lt;<span class="type">int</span>&gt; <span class="built_in">w</span>(N), <span class="built_in">v</span>(N);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; w[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) cin &gt;&gt; v[i];</span><br><span class="line"></span><br><span class="line">    vector &lt;<span class="type">long</span> <span class="type">long</span>&gt; <span class="built_in">dp</span>(W + <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = w[i]; j &lt;= W; ++j)</span><br><span class="line">            dp[j] = <span class="built_in">max</span>(dp[j], dp[j - w[i]] + v[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; dp[W] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>競程</category>
-        <category>競程筆記</category>
+        <category>音高 Pitch</category>
+        <category>音階 Scales</category>
       </categories>
       <tags>
-        <tag>pitch</tag>
-        <tag>scales</tag>
-        <tag>keys</tag>
-        <tag>interval</tag>
-        <tag>triads</tag>
+        <tag>音階 Scales</tag>
+        <tag>調 Keys</tag>
+        <tag>音程 Interval</tag>
+        <tag>三和弦 Triads</tag>
       </tags>
   </entry>
   <entry>
