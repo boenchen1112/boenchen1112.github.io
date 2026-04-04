@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://boenchen1112.github.io/talking/</loc>
-    
-    <lastmod>2026-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://boenchen1112.github.io/messageboard/</loc>
     
     <lastmod>2026-04-04</lastmod>
@@ -29,16 +20,7 @@
   </url>
   
   <url>
-    <loc>https://boenchen1112.github.io/about/</loc>
-    
-    <lastmod>2026-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://boenchen1112.github.io/examples/</loc>
+    <loc>https://boenchen1112.github.io/talking/</loc>
     
     <lastmod>2026-04-04</lastmod>
     
@@ -57,6 +39,24 @@
   
   <url>
     <loc>https://boenchen1112.github.io/gallery/</loc>
+    
+    <lastmod>2026-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boenchen1112.github.io/examples/</loc>
+    
+    <lastmod>2026-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://boenchen1112.github.io/about/</loc>
     
     <lastmod>2026-04-04</lastmod>
     

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <author>
-    <name>Jerry</name>
+    <name>Boen</name>
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
   <id>https://boenchen1112.github.io/</id>
   <link href="https://boenchen1112.github.io/" rel="alternate"/>
   <link href="https://boenchen1112.github.io/atom.xml" rel="self"/>
-  <rights>All rights reserved 2026, Jerry</rights>
-  <subtitle>A Simple and Card UI Design theme for Hexo</subtitle>
-  <title>Butterfly</title>
+  <rights>All rights reserved 2026, Boen</rights>
+  <subtitle>快樂學音樂</subtitle>
+  <title>Boen's 五線譜</title>
   <updated>2025-12-10T00:00:00.000Z</updated>
   <entry>
     <author>
-      <name>Jerry</name>
+      <name>Boen</name>
     </author>
     <category term="Docs" scheme="https://boenchen1112.github.io/categories/Docs/"/>
     <category term="Tutorial" scheme="https://boenchen1112.github.io/tags/Tutorial/"/>
