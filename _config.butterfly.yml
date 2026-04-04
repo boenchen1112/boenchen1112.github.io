@@ -66,10 +66,10 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.ico
+favicon: /img/Sung Jin Woo.jpeg
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: /img/Sung Jin Woo.jpeg
   effect: false
 
 # Disable all banner images
@@ -186,8 +186,8 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
-    - A Simple and Card UI Design theme for Hexo
-    - Never put off till tomorrow what you can do today
+    - What does not kill me makes me stronger
+    - Beauty is everywhere. It is not that she is lacking to our eye, but our eyes which fail to perceive her
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
