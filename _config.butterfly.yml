@@ -890,6 +890,7 @@ inject:
   head:
   bottom:
     - <script defer src="/js/docs-sidebar.js"></script>
+    - <script defer src="/js/busuanzi-offset.js"></script>
 
 CDN:
   internal_provider: local
