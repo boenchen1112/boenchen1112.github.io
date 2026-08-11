@@ -26,6 +26,7 @@ menu:
     Gallery: /gallery/ || fas fa-images
     Talking: /talking/ || fas fa-comment-dots
     Examples: /examples/ || fas fa-thumbs-up
+    yt-dlp Builder: /yt-dlp/ || fas fa-download
   Docs||fas fa-book:
     🚀 Quick Start: /posts/21cfbf15/
     📑 Theme Pages: /posts/dc584b87/
