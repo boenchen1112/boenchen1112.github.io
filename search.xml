@@ -11,15 +11,15 @@
 <div class="hymn-player">
   <p class="hymn-player-label">版本一：改編版（較豐富）</p>
   <audio controls preload="none" src="/media/hymns/001-imp.mp3"></audio>
-  <midi-player src="/media/hymns/001-imp.mid" sound-font visualizer="#mv-001-imp" class="hymn-midi-player"></midi-player>
-  <midi-visualizer type="staff" id="mv-001-imp" src="/media/hymns/001-imp.mid" class="hymn-midi-visualizer"></midi-visualizer>
+  <p class="hymn-score-link"><a href="/media/hymns/001-imp.pdf" target="_blank" rel="noopener">📄 在新分頁開啟樂譜 PDF</a></p>
+  <iframe class="hymn-score-frame" src="/media/hymns/001-imp.pdf" loading="lazy" title="版本一樂譜"></iframe>
 </div>
 
 <div class="hymn-player">
   <p class="hymn-player-label">版本二：貼近原譜版</p>
   <audio controls preload="none" src="/media/hymns/001.mp3"></audio>
-  <midi-player src="/media/hymns/001.mid" sound-font visualizer="#mv-001" class="hymn-midi-player"></midi-player>
-  <midi-visualizer type="staff" id="mv-001" src="/media/hymns/001.mid" class="hymn-midi-visualizer"></midi-visualizer>
+  <p class="hymn-score-link"><a href="/media/hymns/001.pdf" target="_blank" rel="noopener">📄 在新分頁開啟樂譜 PDF</a></p>
+  <iframe class="hymn-score-frame" src="/media/hymns/001.pdf" loading="lazy" title="版本二樂譜"></iframe>
 </div>
 
 <p>雖然第一個版本可以呈現出神威嚴、天堂華美的一面，但我個人更偏好第二個版本，原因是：這首詩歌的歌詞一開頭就是「聖哉、聖哉、聖哉」，連講三遍，代表的是極其重要與神聖，整首曲子都是在頌讚獨一真神的大能與榮耀。如果伴奏編得太過華麗，反而會顯得輕浮、不夠莊重，模糊了曲子本身該有的份量。</p>
@@ -70,11 +70,9 @@
 .hymn-player { margin: 1.2rem 0; padding: 0.8rem 1rem; border: 1px solid var(--btn-border-color, #ddd); border-radius: 8px; }
 .hymn-player-label { font-weight: 600; margin: 0 0 0.5rem; }
 .hymn-player audio { width: 100%; }
-.hymn-midi-player { width: 100%; margin-top: 0.5rem; }
-.hymn-midi-visualizer { display: block; width: 100%; overflow-x: auto; margin-top: 0.5rem; }
+.hymn-score-link { margin: 0.5rem 0 0.3rem; }
+.hymn-score-frame { display: block; width: 100%; height: 600px; margin-top: 0.3rem; border: 1px solid var(--btn-border-color, #ddd); border-radius: 6px; }
 </style>
-
-<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
 ]]></content>
       <categories>
         <category>樂理與伴奏</category>
@@ -92,8 +90,8 @@
 <div class="hymn-player">
   <p class="hymn-player-label">《亞伯拉罕的神》</p>
   <audio controls preload="none" src="/media/hymns/003.mp3"></audio>
-  <midi-player src="/media/hymns/003.mid" sound-font visualizer="#mv-003" class="hymn-midi-player"></midi-player>
-  <midi-visualizer type="staff" id="mv-003" src="/media/hymns/003.mid" class="hymn-midi-visualizer"></midi-visualizer>
+  <p class="hymn-score-link"><a href="/media/hymns/003.pdf" target="_blank" rel="noopener">📄 在新分頁開啟樂譜 PDF</a></p>
+  <iframe class="hymn-score-frame" src="/media/hymns/003.pdf" loading="lazy" title="樂譜"></iframe>
 </div>
 
 <h2 id="特色一：升降記號特別多，容易讓人慌亂"><a href="#特色一：升降記號特別多，容易讓人慌亂" class="headerlink" title="特色一：升降記號特別多，容易讓人慌亂"></a>特色一：升降記號特別多，容易讓人慌亂</h2><p>聽完曲子、對照譜面後，會發現一件很明顯的事：跟前一首（升降記號可能全曲只有兩三個臨時記號）相比，這首曲子的升記號和還原記號非常多。原因除了它本身是小調（小調的調號通常就比大調多），臨時升降記號也出現得很頻繁。</p>
@@ -107,11 +105,9 @@
 .hymn-player { margin: 1.2rem 0; padding: 0.8rem 1rem; border: 1px solid var(--btn-border-color, #ddd); border-radius: 8px; }
 .hymn-player-label { font-weight: 600; margin: 0 0 0.5rem; }
 .hymn-player audio { width: 100%; }
-.hymn-midi-player { width: 100%; margin-top: 0.5rem; }
-.hymn-midi-visualizer { display: block; width: 100%; overflow-x: auto; margin-top: 0.5rem; }
+.hymn-score-link { margin: 0.5rem 0 0.3rem; }
+.hymn-score-frame { display: block; width: 100%; height: 600px; margin-top: 0.3rem; border: 1px solid var(--btn-border-color, #ddd); border-radius: 6px; }
 </style>
-
-<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
 ]]></content>
       <categories>
         <category>樂理與伴奏</category>
