@@ -27,14 +27,6 @@ menu:
     Talking: /talking/ || fas fa-comment-dots
     Examples: /examples/ || fas fa-thumbs-up
     yt-dlp Builder: /yt-dlp/ || fas fa-download
-  Docs||fas fa-book:
-    🚀 Quick Start: /posts/21cfbf15/
-    📑 Theme Pages: /posts/dc584b87/
-    🛠 Theme Config: /posts/4aa8abbe/
-    ⚔️ Tag Plugins: /posts/ceeb73f/
-    ❓ FAQ: /posts/98d20436/
-    ⚡️ Advanced Tutorial: /posts/4073eda/
-    ✨ Update Log: /posts/198a4240/
   Messageboard: /messageboard/ || fas fa-envelope
 
 # --------------------------------------
@@ -273,21 +265,6 @@ noticeOutdate:
 
 footer:
   nav:
-    - content:
-      - title: Docs
-        item:
-          - title: 🚀 Quick Start
-            url: /posts/21cfbf15/
-          - title: 📑 Theme Pages
-            url: /posts/dc584b87/
-          - title: 🛠 Theme Config
-            url: /posts/4aa8abbe/
-          - title: ⚔️ Tag Plugins
-            url: /posts/ceeb73f/
-          - title: ❓ FAQ
-            url: /posts/98d20436/
-          - title: ⚡️ Advanced Tutorial
-            url: /posts/4073eda/
     - content:
       - title: Other
         item:
@@ -890,7 +867,6 @@ css_prefix: true
 inject:
   head:
   bottom:
-    - <script defer src="/js/docs-sidebar.js"></script>
     - <script defer src="/js/busuanzi-offset.js"></script>
 
 CDN:
